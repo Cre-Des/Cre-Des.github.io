@@ -1,0 +1,59 @@
+# Site
+title:              Shuhan Cheng 的个人空间
+bio:                '具身智能学习'
+description:        "纵有疾风起，人生不言弃。"
+locale:             zh_CN
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://Cre-Des.github.io" # the base hostname & protocol for your site
+
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/blog/:title/"
+    layout: post
+    author:
+
+# Jekyll
+permalink:          /blog/:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+# Comments
+disqus_shortname:   ""
+
+# Social
+github:             Cre-Des
+
+# personal
+location:           USTC, China
+phone:              13718483892
+email:              shuhanchengustc@163.com
+
+# Gems
+gems::
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+jekyll-mentions:
+    base_url: https://github.com
+
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
